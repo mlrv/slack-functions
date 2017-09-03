@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "events-messages/{name}",
+      "connection": "statustodayblob_STORAGE"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "outDatabase",
+      "collectionName": "MyCollection",
+      "createIfNotExists": true,
+      "connection": "mongodbmarco_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

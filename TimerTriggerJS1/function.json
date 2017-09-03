@@ -1,0 +1,18 @@
+{
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 */3 * * * *"
+    },
+    {
+      "type": "blob",
+      "name": "outputBlob",
+      "path": "access-logs/{rand-guid}",
+      "connection": "statustodayblob_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}

@@ -1,0 +1,21 @@
+{
+  "bindings": [
+    {
+      "name": "myBlob",
+      "type": "blobTrigger",
+      "direction": "in",
+      "path": "access-logs/{name}",
+      "connection": "statustodayblob_STORAGE"
+    },
+    {
+      "type": "documentDB",
+      "name": "outputDocument",
+      "databaseName": "logsDatabase",
+      "collectionName": "AccessLogs",
+      "createIfNotExists": true,
+      "connection": "mongodbmarco_DOCUMENTDB",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
